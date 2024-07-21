@@ -18,26 +18,35 @@
         },
         "rules": [
           {
-            "description": "在英文模式下连按ii在terminal中进入插件模式并切换到中文",
+            "description": "单独按下右control键映射到right_command + spacebar来切换输入法,因为右command键已经绑定为右control键了，所以实际是按右command键",
             "manipulators": [
               {
                 "from": {
-                  "key_code": "i",
-                  "modifiers": {
-                    "optional": ["any"]
-                  }
+                  "key_code": "right_control"
                 },
                 "to": [
+                  {
+                    "key_code": "right_control"
+                  }
+                ],
+                "to_if_alone": [
                   {
                     "key_code": "spacebar",
                     "modifiers": ["right_command"]
                   }
                 ],
-                "type": "basic",
+                "type": "basic"
+              }
+            ]
+          },
+          {
+            "description": "在英文模式下连按ii在terminal中进入插件模式并切换到中文",
+            "manipulators": [
+              {
                 "conditions": [
                   {
-                    "type": "variable_if",
                     "name": "i pressed",
+                    "type": "variable_if",
                     "value": 1
                   },
                   {
@@ -52,7 +61,20 @@
                     "bundle_identifiers": ["^com\\.apple\\.Terminal$"],
                     "type": "frontmost_application_if"
                   }
-                ]
+                ],
+                "from": {
+                  "key_code": "i",
+                  "modifiers": {
+                    "optional": ["any"]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "spacebar",
+                    "modifiers": ["right_command"]
+                  }
+                ],
+                "type": "basic"
               },
               {
                 "from": {
@@ -73,7 +95,7 @@
                   }
                 ],
                 "to_delayed_action": {
-                  "to_if_invoked": [
+                  "to_if_canceled": [
                     {
                       "set_variable": {
                         "name": "i pressed",
@@ -81,7 +103,7 @@
                       }
                     }
                   ],
-                  "to_if_canceled": [
+                  "to_if_invoked": [
                     {
                       "set_variable": {
                         "name": "i pressed",
@@ -98,23 +120,10 @@
             "description": "在terminal中连接aa进入插件模式并切换到中文",
             "manipulators": [
               {
-                "from": {
-                  "key_code": "a",
-                  "modifiers": {
-                    "optional": ["any"]
-                  }
-                },
-                "to": [
-                  {
-                    "key_code": "spacebar",
-                    "modifiers": ["right_command"]
-                  }
-                ],
-                "type": "basic",
                 "conditions": [
                   {
-                    "type": "variable_if",
                     "name": "a pressed",
+                    "type": "variable_if",
                     "value": 1
                   },
                   {
@@ -129,7 +138,20 @@
                     "bundle_identifiers": ["^com\\.apple\\.Terminal$"],
                     "type": "frontmost_application_if"
                   }
-                ]
+                ],
+                "from": {
+                  "key_code": "a",
+                  "modifiers": {
+                    "optional": ["any"]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "spacebar",
+                    "modifiers": ["right_command"]
+                  }
+                ],
+                "type": "basic"
               },
               {
                 "from": {
@@ -150,7 +172,7 @@
                   }
                 ],
                 "to_delayed_action": {
-                  "to_if_invoked": [
+                  "to_if_canceled": [
                     {
                       "set_variable": {
                         "name": "a pressed",
@@ -158,7 +180,7 @@
                       }
                     }
                   ],
-                  "to_if_canceled": [
+                  "to_if_invoked": [
                     {
                       "set_variable": {
                         "name": "a pressed",
@@ -329,26 +351,6 @@
                 "type": "basic"
               }
             ]
-          },
-          {
-            "description": "f17 to command + space",
-            "manipulators": [
-              {
-                "from": {
-                  "key_code": "f17",
-                  "modifiers": {
-                    "optional": ["any"]
-                  }
-                },
-                "to": [
-                  {
-                    "key_code": "spacebar",
-                    "modifiers": ["right_command"]
-                  }
-                ],
-                "type": "basic"
-              }
-            ]
           }
         ]
       },
@@ -372,18 +374,7 @@
           "mouse_flip_y": false,
           "mouse_swap_wheels": false,
           "mouse_swap_xy": false,
-          "simple_modifications": [
-            {
-              "from": {
-                "key_code": "right_command"
-              },
-              "to": [
-                {
-                  "key_code": "right_control"
-                }
-              ]
-            }
-          ],
+          "simple_modifications": [],
           "treat_as_built_in_keyboard": true
         },
         {
@@ -569,7 +560,18 @@
         "delay_milliseconds_before_open_device": 1000
       },
       "selected": true,
-      "simple_modifications": [],
+      "simple_modifications": [
+        {
+          "from": {
+            "key_code": "right_command"
+          },
+          "to": [
+            {
+              "key_code": "right_control"
+            }
+          ]
+        }
+      ],
       "virtual_hid_keyboard": {
         "country_code": 0,
         "indicate_sticky_modifier_keys_state": true,
