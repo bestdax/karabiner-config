@@ -309,9 +309,15 @@
                   {
                     "bundle_identifiers": ["^com\\.apple\\.Terminal$"],
                     "type": "frontmost_application_if"
+                  },
+                  {
+                    "variable_if": {
+                      "name": "normal_mode",
+                      "value": 0
+                    }
                   }
                 ],
-                "description": "在终端中如果用的是鼠须管中文输入按下Caps Lock切换到英文并用escape键跳出insert模式",
+                "description": "在终端的插入模式下，如果用的是鼠须管中文输入按下Caps Lock切换到英文并用escape键跳出insert模式",
                 "from": {
                   "key_code": "caps_lock",
                   "modifiers": {
@@ -325,6 +331,12 @@
                   },
                   {
                     "key_code": "escape"
+                  },
+                  {
+                    "set_variable": {
+                      "name": "normal_mode",
+                      "value": 1
+                    }
                   }
                 ],
                 "to_if_held_down": [
