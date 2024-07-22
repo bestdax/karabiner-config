@@ -492,12 +492,12 @@
             ]
           },
           {
-            "description": "在英文模式下连按ii在terminal中进入插件模式并切换到中文",
+            "description": "在英文模式下连按jk在terminal中输出escape",
             "manipulators": [
               {
                 "conditions": [
                   {
-                    "name": "i pressed",
+                    "name": "j pressed",
                     "type": "variable_if",
                     "value": 1
                   },
@@ -515,22 +515,27 @@
                   }
                 ],
                 "from": {
-                  "key_code": "i",
+                  "key_code": "k",
                   "modifiers": {
                     "optional": ["any"]
                   }
                 },
                 "to": [
                   {
-                    "key_code": "spacebar",
-                    "modifiers": ["right_command"]
+                    "key_code": "escape"
+                  },
+                  {
+                    "set_variable": {
+                      "name": "normal_mode",
+                      "value": 1
+                    }
                   }
                 ],
                 "type": "basic"
               },
               {
                 "from": {
-                  "key_code": "i",
+                  "key_code": "j",
                   "modifiers": {
                     "optional": ["any"]
                   }
@@ -538,106 +543,32 @@
                 "to": [
                   {
                     "set_variable": {
-                      "name": "i pressed",
+                      "name": "j pressed",
                       "value": 1
                     }
-                  },
-                  {
-                    "key_code": "i"
                   }
                 ],
                 "to_delayed_action": {
                   "to_if_canceled": [
                     {
                       "set_variable": {
-                        "name": "i pressed",
+                        "name": "j pressed",
                         "value": 0
                       }
+                    },
+                    {
+                      "key_code": "j"
                     }
                   ],
                   "to_if_invoked": [
                     {
                       "set_variable": {
-                        "name": "i pressed",
+                        "name": "j pressed",
                         "value": 0
                       }
-                    }
-                  ]
-                },
-                "type": "basic"
-              }
-            ]
-          },
-          {
-            "description": "在terminal中连接aa进入插件模式并切换到中文",
-            "manipulators": [
-              {
-                "conditions": [
-                  {
-                    "name": "a pressed",
-                    "type": "variable_if",
-                    "value": 1
-                  },
-                  {
-                    "input_sources": [
-                      {
-                        "input_source_id": "com.apple.keylayout.ABC"
-                      }
-                    ],
-                    "type": "input_source_if"
-                  },
-                  {
-                    "bundle_identifiers": ["^com\\.apple\\.Terminal$"],
-                    "type": "frontmost_application_if"
-                  }
-                ],
-                "from": {
-                  "key_code": "a",
-                  "modifiers": {
-                    "optional": ["any"]
-                  }
-                },
-                "to": [
-                  {
-                    "key_code": "spacebar",
-                    "modifiers": ["right_command"]
-                  }
-                ],
-                "type": "basic"
-              },
-              {
-                "from": {
-                  "key_code": "a",
-                  "modifiers": {
-                    "optional": ["any"]
-                  }
-                },
-                "to": [
-                  {
-                    "set_variable": {
-                      "name": "a pressed",
-                      "value": 1
-                    }
-                  },
-                  {
-                    "key_code": "a"
-                  }
-                ],
-                "to_delayed_action": {
-                  "to_if_canceled": [
+                    },
                     {
-                      "set_variable": {
-                        "name": "a pressed",
-                        "value": 0
-                      }
-                    }
-                  ],
-                  "to_if_invoked": [
-                    {
-                      "set_variable": {
-                        "name": "a pressed",
-                        "value": 0
-                      }
+                      "key_code": "j"
                     }
                   ]
                 },
