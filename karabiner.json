@@ -759,6 +759,59 @@
                 "type": "basic"
               }
             ]
+          },
+          {
+            "manipulators": [
+              {
+                "conditions": [
+                  {
+                    "input_sources": [
+                      {
+                        "input_source_id": "com.apple.keylayout.ABC"
+                      }
+                    ],
+                    "type": "input_source_if"
+                  },
+                  {
+                    "bundle_identifiers": ["^com\\.apple\\.Terminal$"],
+                    "type": "frontmost_application_if"
+                  },
+                  {
+                    "type": "variable_if",
+                    "name": "normal_mode",
+                    "value": 1
+                  }
+                ],
+                "description": "在终端的普通模式下，如果用的是英文输入法按下Caps Lock按a进入insert模式并切换到鼠须管",
+                "from": {
+                  "key_code": "caps_lock",
+                  "modifiers": {
+                    "optional": ["any"]
+                  }
+                },
+                "to_if_alone": [
+                  {
+                    "key_code": "spacebar",
+                    "modifiers": ["left_command"]
+                  },
+                  {
+                    "set_variable": {
+                      "name": "normal_mode",
+                      "value": 0
+                    }
+                  },
+                  {
+                    "key_code": "a"
+                  }
+                ],
+                "to_if_held_down": [
+                  {
+                    "key_code": "caps_lock"
+                  }
+                ],
+                "type": "basic"
+              }
+            ]
           }
         ]
       },
