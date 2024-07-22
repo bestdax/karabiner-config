@@ -81,6 +81,170 @@
             ]
           },
           {
+            "description": "在normal模式下按下a切换到insert模式",
+            "manipulators": [
+              {
+                "conditions": [
+                  {
+                    "name": "normal_mode",
+                    "type": "variable_if",
+                    "value": 1
+                  },
+                  {
+                    "input_sources": [
+                      {
+                        "input_source_id": "com.apple.keylayout.ABC"
+                      }
+                    ],
+                    "type": "input_source_if"
+                  },
+                  {
+                    "bundle_identifiers": ["^com\\.apple\\.Terminal$"],
+                    "type": "frontmost_application_if"
+                  }
+                ],
+                "from": {
+                  "key_code": "a"
+                },
+                "to": [
+                  {
+                    "key_code": "a"
+                  },
+                  {
+                    "set_variable": {
+                      "name": "normal_mode",
+                      "value": 0
+                    }
+                  }
+                ],
+                "type": "basic"
+              }
+            ]
+          },
+          {
+            "description": "在normal模式下按下s切换到insert模式",
+            "manipulators": [
+              {
+                "conditions": [
+                  {
+                    "name": "normal_mode",
+                    "type": "variable_if",
+                    "value": 1
+                  },
+                  {
+                    "input_sources": [
+                      {
+                        "input_source_id": "com.apple.keylayout.ABC"
+                      }
+                    ],
+                    "type": "input_source_if"
+                  },
+                  {
+                    "bundle_identifiers": ["^com\\.apple\\.Terminal$"],
+                    "type": "frontmost_application_if"
+                  }
+                ],
+                "from": {
+                  "key_code": "s"
+                },
+                "to": [
+                  {
+                    "key_code": "s"
+                  },
+                  {
+                    "set_variable": {
+                      "name": "normal_mode",
+                      "value": 0
+                    }
+                  }
+                ],
+                "type": "basic"
+              }
+            ]
+          },
+          {
+            "description": "在normal模式下按下c切换到insert模式",
+            "manipulators": [
+              {
+                "conditions": [
+                  {
+                    "name": "normal_mode",
+                    "type": "variable_if",
+                    "value": 1
+                  },
+                  {
+                    "input_sources": [
+                      {
+                        "input_source_id": "com.apple.keylayout.ABC"
+                      }
+                    ],
+                    "type": "input_source_if"
+                  },
+                  {
+                    "bundle_identifiers": ["^com\\.apple\\.Terminal$"],
+                    "type": "frontmost_application_if"
+                  }
+                ],
+                "from": {
+                  "key_code": "c"
+                },
+                "to": [
+                  {
+                    "key_code": "c"
+                  },
+                  {
+                    "set_variable": {
+                      "name": "normal_mode",
+                      "value": 0
+                    }
+                  }
+                ],
+                "type": "basic"
+              }
+            ]
+          },
+          {
+            "description": "在normal模式下按下o切换到insert模式",
+            "manipulators": [
+              {
+                "conditions": [
+                  {
+                    "name": "normal_mode",
+                    "type": "variable_if",
+                    "value": 1
+                  },
+                  {
+                    "input_sources": [
+                      {
+                        "input_source_id": "com.apple.keylayout.ABC"
+                      }
+                    ],
+                    "type": "input_source_if"
+                  },
+                  {
+                    "bundle_identifiers": ["^com\\.apple\\.Terminal$"],
+                    "type": "frontmost_application_if"
+                  }
+                ],
+                "from": {
+                  "key_code": "o"
+                },
+                "to": [
+                  {
+                    "key_code": "o"
+                  },
+                  {
+                    "set_variable": {
+                      "name": "normal_mode",
+                      "value": 0
+                    }
+                  }
+                ],
+                "type": "basic"
+              }
+            ]
+          },
+          {
             "description": "单独按下右control键映射到right_command + spacebar来切换输入法,因为右command键已经绑定为右control键了，所以实际是按右command键",
             "manipulators": [
               {
