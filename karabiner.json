@@ -525,6 +525,9 @@
                     "key_code": "escape"
                   },
                   {
+                    "key_code": "k"
+                  },
+                  {
                     "set_variable": {
                       "name": "normal_mode",
                       "value": 1
