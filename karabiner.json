@@ -665,7 +665,7 @@
                   {
                     "input_sources": [
                       {
-                        "language": "zh-Hant"
+                        "input_source_id": "com.apple.keylayout.ABC"
                       }
                     ],
                     "type": "input_source_if"
@@ -675,13 +675,12 @@
                     "type": "frontmost_application_if"
                   },
                   {
-                    "variable_if": {
-                      "name": "normal_mode",
-                      "value": 0
-                    }
+                    "type": "variable_if",
+                    "name": "normal_mode",
+                    "value": 0
                   }
                 ],
-                "description": "在终端的插入模式下，如果用的是鼠须管中文输入按下Caps Lock切换到英文并用escape键跳出insert模式",
+                "description": "在终端中，在插入模式下如果是英文输入状态，按下caps_lock键按仅输出escape键",
                 "from": {
                   "key_code": "caps_lock",
                   "modifiers": {
@@ -689,10 +688,6 @@
                   }
                 },
                 "to_if_alone": [
-                  {
-                    "key_code": "spacebar",
-                    "modifiers": ["left_command"]
-                  },
                   {
                     "key_code": "escape"
                   },
@@ -719,7 +714,7 @@
                   {
                     "input_sources": [
                       {
-                        "language": "en"
+                        "input_source_id": "im.rime.inputmethod.Squirrel.Hant"
                       }
                     ],
                     "type": "input_source_if"
@@ -729,13 +724,12 @@
                     "type": "frontmost_application_if"
                   },
                   {
-                    "variable_if": {
-                      "name": "normal_mode",
-                      "value": 0
-                    }
+                    "type": "variable_if",
+                    "name": "normal_mode",
+                    "value": 0
                   }
                 ],
-                "description": "在终端中，在插入模式下如果是英文输入状态，按下caps_lock键按仅输出escape键",
+                "description": "在终端的插入模式下，如果用的是鼠须管中文输入按下Caps Lock切换到英文并用escape键跳出insert模式",
                 "from": {
                   "key_code": "caps_lock",
                   "modifiers": {
@@ -743,6 +737,10 @@
                   }
                 },
                 "to_if_alone": [
+                  {
+                    "key_code": "spacebar",
+                    "modifiers": ["left_command"]
+                  },
                   {
                     "key_code": "escape"
                   },
