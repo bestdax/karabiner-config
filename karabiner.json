@@ -33,6 +33,11 @@
                       "name": "normal_mode",
                       "value": 1
                     }
+                  },
+                  {
+                    "select_input_source": {
+                      "input_source_id": "com.apple.keylayout.ABC"
+                    }
                   }
                 ],
                 "type": "basic"
