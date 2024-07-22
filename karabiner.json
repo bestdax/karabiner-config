@@ -18,6 +18,28 @@
         },
         "rules": [
           {
+            "description": "按下Esc键设置为normal模式",
+            "manipulators": [
+              {
+                "from": {
+                  "key_code": "escape"
+                },
+                "to": [
+                  {
+                    "key_code": "escape"
+                  },
+                  {
+                    "set_variable": {
+                      "name": "normal_mode",
+                      "value": 1
+                    }
+                  }
+                ],
+                "type": "basic"
+              }
+            ]
+          },
+          {
             "description": "单独按下右control键映射到right_command + spacebar来切换输入法,因为右command键已经绑定为右control键了，所以实际是按右command键",
             "manipulators": [
               {
