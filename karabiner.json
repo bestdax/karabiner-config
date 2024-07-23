@@ -475,15 +475,15 @@
             ]
           },
           {
-            "description": "单独按下右control键映射到right_command + spacebar来切换输入法,因为右command键已经绑定为右control键了，所以实际是按右command键",
+            "description": "单独按下右shift键映射到right_command + spacebar来切换输入法",
             "manipulators": [
               {
                 "from": {
-                  "key_code": "right_control"
+                  "key_code": "right_shift"
                 },
                 "to": [
                   {
-                    "key_code": "right_control"
+                    "key_code": "right_shift"
                   }
                 ],
                 "to_if_alone": [

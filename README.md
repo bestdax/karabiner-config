@@ -6,7 +6,7 @@
 
 - 按下 escape 键将 normal_mode 变量设置为 1，并且将输入法切换到系统自带的英文输入法
 - 将右 command 键映射为右 control
-- 单独按下右 control 键(即右 command 键)切换输入法
+- 单独按下右 shift 键切换输入法
 
 ### 在非终端 APP 中
 
