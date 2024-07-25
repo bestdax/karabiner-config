@@ -497,7 +497,7 @@
             ]
           },
           {
-            "description": "在终端中right_command to right_control",
+            "description": "在终端中right_command to right_control, 单独按的时候输出为right_control+spacebar，用于tmux前导键",
             "manipulators": [
               {
                 "conditions": [
@@ -511,7 +511,14 @@
                 },
                 "to": [
                   {
-                    "key_code": "right_control"
+                    "key_code": "right_control",
+                    "lazy": true
+                  }
+                ],
+                "to_if_alone": [
+                  {
+                    "key_code": "spacebar",
+                    "modifiers": ["right_control"]
                   }
                 ],
                 "type": "basic"
@@ -906,6 +913,7 @@
           "mouse_flip_y": false,
           "mouse_swap_wheels": false,
           "mouse_swap_xy": false,
+          "simple_modifications": [],
           "treat_as_built_in_keyboard": false
         }
       ],
