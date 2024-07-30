@@ -825,6 +825,9 @@
                 },
                 "to_if_alone": [
                   {
+                    "key_code": "a"
+                  },
+                  {
                     "key_code": "spacebar",
                     "modifiers": ["left_command"]
                   },
@@ -833,9 +836,6 @@
                       "name": "normal_mode",
                       "value": 0
                     }
-                  },
-                  {
-                    "key_code": "a"
                   }
                 ],
                 "to_if_held_down": [
