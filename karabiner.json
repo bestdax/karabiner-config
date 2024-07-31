@@ -695,6 +695,28 @@
           {
             "manipulators": [
               {
+                "description": "单独按下左shift锁定大写",
+                "from": {
+                  "key_code": "left_shift",
+                  "modifiers": {
+                    "optional": ["any"]
+                  }
+                },
+                "to": {
+                  "key_code": "left_shift"
+                },
+                "to_if_alone": [
+                  {
+                    "key_code": "caps_lock"
+                  }
+                ],
+                "type": "basic"
+              }
+            ]
+          },
+          {
+            "manipulators": [
+              {
                 "conditions": [
                   {
                     "input_sources": [
