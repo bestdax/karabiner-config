@@ -17,7 +17,6 @@
 - 在 `normal_mode` 为 1，英文输入法状态时按下 `caps_lock` 设置 `normal_mode` 为 0，并输出 `a` 进入 `Vim` 的插入模式，然后切换输入法为鼠须管
 - 在 `normal_mode` 为 0，鼠须管输入法状态时按下 `caps_lock` 设置 `normal_mode` 为 1，并输出 `escape` 跳出 `vim` 插入模式，然后切换输入法为系统自带的英文输入法
 - 在 `normal_mode` 为 0，系统自带的英文输入法状态时按下 `caps_lock` 设置 `normal_mode` 为 1，并输出 `escape` 跳出 `vim` 插入模式
-- 连续按下 `jk` 映射为 `escape` 键，然后再切换输入法为系统自带的英文输入法
 - 将右 `command` 键映射为右 `control`
 - 单独按下右`control`键(即右`command`键)输出`control+space`，用于实现`tmux`的前导键
 - 单独按下右 `shift` 键切换输入法
