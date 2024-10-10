@@ -1,33 +1,16 @@
 {
-  "global": {
-    "ask_for_confirmation_before_quitting": true,
-    "check_for_updates_on_startup": true,
-    "show_in_menu_bar": true,
-    "show_profile_name_in_menu_bar": false,
-    "unsafe_ui": false
-  },
   "profiles": [
     {
       "complex_modifications": {
-        "parameters": {
-          "basic.simultaneous_threshold_milliseconds": 50,
-          "basic.to_delayed_action_delay_milliseconds": 100,
-          "basic.to_if_alone_timeout_milliseconds": 1000,
-          "basic.to_if_held_down_threshold_milliseconds": 500,
-          "mouse_motion_to_scroll.speed": 100
-        },
+        "parameters": { "basic.to_delayed_action_delay_milliseconds": 100 },
         "rules": [
           {
             "description": "按下Esc键设置为normal模式",
             "manipulators": [
               {
-                "from": {
-                  "key_code": "escape"
-                },
+                "from": { "key_code": "escape" },
                 "to": [
-                  {
-                    "key_code": "escape"
-                  },
+                  { "key_code": "escape" },
                   {
                     "set_variable": {
                       "name": "normal_mode",
@@ -56,9 +39,7 @@
                   },
                   {
                     "input_sources": [
-                      {
-                        "input_source_id": "com.apple.keylayout.ABC"
-                      }
+                      { "input_source_id": "com.apple.keylayout.ABC" }
                     ],
                     "type": "input_source_if"
                   },
@@ -67,13 +48,9 @@
                     "type": "frontmost_application_if"
                   }
                 ],
-                "from": {
-                  "key_code": "i"
-                },
+                "from": { "key_code": "i" },
                 "to": [
-                  {
-                    "key_code": "i"
-                  },
+                  { "key_code": "i" },
                   {
                     "set_variable": {
                       "name": "normal_mode",
@@ -97,9 +74,7 @@
                   },
                   {
                     "input_sources": [
-                      {
-                        "input_source_id": "com.apple.keylayout.ABC"
-                      }
+                      { "input_source_id": "com.apple.keylayout.ABC" }
                     ],
                     "type": "input_source_if"
                   },
@@ -110,9 +85,7 @@
                 ],
                 "from": {
                   "key_code": "i",
-                  "modifiers": {
-                    "mandatory": ["shift"]
-                  }
+                  "modifiers": { "mandatory": ["shift"] }
                 },
                 "to": [
                   {
@@ -142,9 +115,7 @@
                   },
                   {
                     "input_sources": [
-                      {
-                        "input_source_id": "com.apple.keylayout.ABC"
-                      }
+                      { "input_source_id": "com.apple.keylayout.ABC" }
                     ],
                     "type": "input_source_if"
                   },
@@ -153,13 +124,9 @@
                     "type": "frontmost_application_if"
                   }
                 ],
-                "from": {
-                  "key_code": "a"
-                },
+                "from": { "key_code": "a" },
                 "to": [
-                  {
-                    "key_code": "a"
-                  },
+                  { "key_code": "a" },
                   {
                     "set_variable": {
                       "name": "normal_mode",
@@ -183,9 +150,7 @@
                   },
                   {
                     "input_sources": [
-                      {
-                        "input_source_id": "com.apple.keylayout.ABC"
-                      }
+                      { "input_source_id": "com.apple.keylayout.ABC" }
                     ],
                     "type": "input_source_if"
                   },
@@ -196,9 +161,7 @@
                 ],
                 "from": {
                   "key_code": "a",
-                  "modifiers": {
-                    "mandatory": ["shift"]
-                  }
+                  "modifiers": { "mandatory": ["shift"] }
                 },
                 "to": [
                   {
@@ -228,9 +191,7 @@
                   },
                   {
                     "input_sources": [
-                      {
-                        "input_source_id": "com.apple.keylayout.ABC"
-                      }
+                      { "input_source_id": "com.apple.keylayout.ABC" }
                     ],
                     "type": "input_source_if"
                   },
@@ -239,13 +200,9 @@
                     "type": "frontmost_application_if"
                   }
                 ],
-                "from": {
-                  "key_code": "s"
-                },
+                "from": { "key_code": "s" },
                 "to": [
-                  {
-                    "key_code": "s"
-                  },
+                  { "key_code": "s" },
                   {
                     "set_variable": {
                       "name": "normal_mode",
@@ -269,9 +226,7 @@
                   },
                   {
                     "input_sources": [
-                      {
-                        "input_source_id": "com.apple.keylayout.ABC"
-                      }
+                      { "input_source_id": "com.apple.keylayout.ABC" }
                     ],
                     "type": "input_source_if"
                   },
@@ -282,9 +237,7 @@
                 ],
                 "from": {
                   "key_code": "s",
-                  "modifiers": {
-                    "mandatory": ["shift"]
-                  }
+                  "modifiers": { "mandatory": ["shift"] }
                 },
                 "to": [
                   {
@@ -314,9 +267,7 @@
                   },
                   {
                     "input_sources": [
-                      {
-                        "input_source_id": "com.apple.keylayout.ABC"
-                      }
+                      { "input_source_id": "com.apple.keylayout.ABC" }
                     ],
                     "type": "input_source_if"
                   },
@@ -325,13 +276,9 @@
                     "type": "frontmost_application_if"
                   }
                 ],
-                "from": {
-                  "key_code": "c"
-                },
+                "from": { "key_code": "c" },
                 "to": [
-                  {
-                    "key_code": "c"
-                  },
+                  { "key_code": "c" },
                   {
                     "set_variable": {
                       "name": "normal_mode",
@@ -355,9 +302,7 @@
                   },
                   {
                     "input_sources": [
-                      {
-                        "input_source_id": "com.apple.keylayout.ABC"
-                      }
+                      { "input_source_id": "com.apple.keylayout.ABC" }
                     ],
                     "type": "input_source_if"
                   },
@@ -368,9 +313,7 @@
                 ],
                 "from": {
                   "key_code": "c",
-                  "modifiers": {
-                    "mandatory": ["shift"]
-                  }
+                  "modifiers": { "mandatory": ["shift"] }
                 },
                 "to": [
                   {
@@ -400,9 +343,7 @@
                   },
                   {
                     "input_sources": [
-                      {
-                        "input_source_id": "com.apple.keylayout.ABC"
-                      }
+                      { "input_source_id": "com.apple.keylayout.ABC" }
                     ],
                     "type": "input_source_if"
                   },
@@ -411,13 +352,9 @@
                     "type": "frontmost_application_if"
                   }
                 ],
-                "from": {
-                  "key_code": "o"
-                },
+                "from": { "key_code": "o" },
                 "to": [
-                  {
-                    "key_code": "o"
-                  },
+                  { "key_code": "o" },
                   {
                     "set_variable": {
                       "name": "normal_mode",
@@ -441,9 +378,7 @@
                   },
                   {
                     "input_sources": [
-                      {
-                        "input_source_id": "com.apple.keylayout.ABC"
-                      }
+                      { "input_source_id": "com.apple.keylayout.ABC" }
                     ],
                     "type": "input_source_if"
                   },
@@ -454,9 +389,7 @@
                 ],
                 "from": {
                   "key_code": "o",
-                  "modifiers": {
-                    "mandatory": ["shift"]
-                  }
+                  "modifiers": { "mandatory": ["shift"] }
                 },
                 "to": [
                   {
@@ -478,18 +411,31 @@
             "description": "单独按下右shift键映射到right_command + spacebar来切换输入法",
             "manipulators": [
               {
-                "from": {
-                  "key_code": "right_shift"
-                },
-                "to": [
-                  {
-                    "key_code": "right_shift"
-                  }
-                ],
+                "from": { "key_code": "right_shift" },
+                "to": [{ "key_code": "right_shift" }],
                 "to_if_alone": [
                   {
                     "key_code": "spacebar",
                     "modifiers": ["right_command"]
+                  }
+                ],
+                "type": "basic"
+              }
+            ]
+          },
+          {
+            "manipulators": [
+              {
+                "description": "单独按下左shift锁定大写",
+                "from": {
+                  "key_code": "left_shift",
+                  "modifiers": { "optional": ["any"] }
+                },
+                "to": { "key_code": "left_shift" },
+                "to_if_alone": [
+                  {
+                    "hold_down_milliseconds": 300,
+                    "key_code": "caps_lock"
                   }
                 ],
                 "type": "basic"
@@ -506,9 +452,7 @@
                     "type": "frontmost_application_if"
                   }
                 ],
-                "from": {
-                  "key_code": "right_command"
-                },
+                "from": { "key_code": "right_command" },
                 "to": [
                   {
                     "key_code": "right_control",
@@ -531,9 +475,7 @@
                 "conditions": [
                   {
                     "input_sources": [
-                      {
-                        "input_source_id": "com.apple.keylayout.ABC"
-                      }
+                      { "input_source_id": "com.apple.keylayout.ABC" }
                     ],
                     "type": "input_source_unless"
                   },
@@ -545,9 +487,7 @@
                 "description": "如果不是英文状态，按下大写锁定键则切换到英文输入法(非终端中)",
                 "from": {
                   "key_code": "caps_lock",
-                  "modifiers": {
-                    "optional": ["any"]
-                  }
+                  "modifiers": { "optional": ["any"] }
                 },
                 "to_if_alone": [
                   {
@@ -556,11 +496,7 @@
                     }
                   }
                 ],
-                "to_if_held_down": [
-                  {
-                    "key_code": "caps_lock"
-                  }
-                ],
+                "to_if_held_down": [{ "key_code": "caps_lock" }],
                 "type": "basic"
               }
             ]
@@ -571,9 +507,7 @@
                 "conditions": [
                   {
                     "input_sources": [
-                      {
-                        "input_source_id": "com.apple.keylayout.ABC"
-                      }
+                      { "input_source_id": "com.apple.keylayout.ABC" }
                     ],
                     "type": "input_source_if"
                   },
@@ -585,9 +519,7 @@
                 "description": "如果当前是英文输入法则按下command+space切换到之前的输入法(非终端中)",
                 "from": {
                   "key_code": "caps_lock",
-                  "modifiers": {
-                    "optional": ["any"]
-                  }
+                  "modifiers": { "optional": ["any"] }
                 },
                 "to_if_alone": [
                   {
@@ -595,33 +527,7 @@
                     "modifiers": ["left_command"]
                   }
                 ],
-                "to_if_held_down": [
-                  {
-                    "key_code": "caps_lock"
-                  }
-                ],
-                "type": "basic"
-              }
-            ]
-          },
-          {
-            "manipulators": [
-              {
-                "description": "单独按下左shift锁定大写",
-                "from": {
-                  "key_code": "left_shift",
-                  "modifiers": {
-                    "optional": ["any"]
-                  }
-                },
-                "to": {
-                  "key_code": "left_shift"
-                },
-                "to_if_alone": [
-                  {
-                    "key_code": "caps_lock"
-                  }
-                ],
+                "to_if_held_down": [{ "key_code": "caps_lock" }],
                 "type": "basic"
               }
             ]
@@ -632,9 +538,7 @@
                 "conditions": [
                   {
                     "input_sources": [
-                      {
-                        "input_source_id": "com.apple.keylayout.ABC"
-                      }
+                      { "input_source_id": "com.apple.keylayout.ABC" }
                     ],
                     "type": "input_source_if"
                   },
@@ -651,14 +555,10 @@
                 "description": "在终端中，在插入模式下如果是英文输入状态，按下caps_lock键按仅输出escape键",
                 "from": {
                   "key_code": "caps_lock",
-                  "modifiers": {
-                    "optional": ["any"]
-                  }
+                  "modifiers": { "optional": ["any"] }
                 },
                 "to_if_alone": [
-                  {
-                    "key_code": "escape"
-                  },
+                  { "key_code": "escape" },
                   {
                     "set_variable": {
                       "name": "normal_mode",
@@ -666,11 +566,7 @@
                     }
                   }
                 ],
-                "to_if_held_down": [
-                  {
-                    "key_code": "caps_lock"
-                  }
-                ],
+                "to_if_held_down": [{ "key_code": "caps_lock" }],
                 "type": "basic"
               }
             ]
@@ -681,9 +577,7 @@
                 "conditions": [
                   {
                     "input_sources": [
-                      {
-                        "input_source_id": "im.rime.inputmethod.Squirrel.Hant"
-                      }
+                      { "input_source_id": "im.rime.inputmethod.Squirrel.Hant" }
                     ],
                     "type": "input_source_if"
                   },
@@ -700,18 +594,14 @@
                 "description": "在终端的插入模式下，如果用的是鼠须管中文输入按下Caps Lock切换到英文并用escape键跳出insert模式",
                 "from": {
                   "key_code": "caps_lock",
-                  "modifiers": {
-                    "optional": ["any"]
-                  }
+                  "modifiers": { "optional": ["any"] }
                 },
                 "to_if_alone": [
                   {
                     "key_code": "spacebar",
                     "modifiers": ["left_command"]
                   },
-                  {
-                    "key_code": "escape"
-                  },
+                  { "key_code": "escape" },
                   {
                     "set_variable": {
                       "name": "normal_mode",
@@ -719,11 +609,7 @@
                     }
                   }
                 ],
-                "to_if_held_down": [
-                  {
-                    "key_code": "caps_lock"
-                  }
-                ],
+                "to_if_held_down": [{ "key_code": "caps_lock" }],
                 "type": "basic"
               }
             ]
@@ -734,9 +620,7 @@
                 "conditions": [
                   {
                     "input_sources": [
-                      {
-                        "input_source_id": "com.apple.keylayout.ABC"
-                      }
+                      { "input_source_id": "com.apple.keylayout.ABC" }
                     ],
                     "type": "input_source_if"
                   },
@@ -753,14 +637,10 @@
                 "description": "在终端的普通模式下，如果用的是英文输入法按下Caps Lock按a进入insert模式并切换到鼠须管",
                 "from": {
                   "key_code": "caps_lock",
-                  "modifiers": {
-                    "optional": ["any"]
-                  }
+                  "modifiers": { "optional": ["any"] }
                 },
                 "to_if_alone": [
-                  {
-                    "key_code": "a"
-                  },
+                  { "key_code": "a" },
                   {
                     "key_code": "spacebar",
                     "modifiers": ["left_command"]
@@ -772,11 +652,7 @@
                     }
                   }
                 ],
-                "to_if_held_down": [
-                  {
-                    "key_code": "caps_lock"
-                  }
-                ],
+                "to_if_held_down": [{ "key_code": "caps_lock" }],
                 "type": "basic"
               }
             ]
@@ -785,204 +661,19 @@
       },
       "devices": [
         {
-          "disable_built_in_keyboard_if_exists": false,
-          "fn_function_keys": [],
-          "game_pad_swap_sticks": false,
           "identifiers": {
-            "is_game_pad": false,
             "is_keyboard": true,
-            "is_pointing_device": false,
             "product_id": 668,
             "vendor_id": 76
           },
-          "ignore": false,
-          "manipulate_caps_lock_led": true,
-          "mouse_flip_horizontal_wheel": false,
-          "mouse_flip_vertical_wheel": false,
-          "mouse_flip_x": false,
-          "mouse_flip_y": false,
-          "mouse_swap_wheels": false,
-          "mouse_swap_xy": false,
-          "simple_modifications": [],
           "treat_as_built_in_keyboard": true
-        },
-        {
-          "disable_built_in_keyboard_if_exists": false,
-          "fn_function_keys": [],
-          "game_pad_swap_sticks": false,
-          "identifiers": {
-            "is_game_pad": false,
-            "is_keyboard": false,
-            "is_pointing_device": true,
-            "product_id": 617,
-            "vendor_id": 76
-          },
-          "ignore": true,
-          "manipulate_caps_lock_led": false,
-          "mouse_flip_horizontal_wheel": false,
-          "mouse_flip_vertical_wheel": false,
-          "mouse_flip_x": false,
-          "mouse_flip_y": false,
-          "mouse_swap_wheels": false,
-          "mouse_swap_xy": false,
-          "simple_modifications": [],
-          "treat_as_built_in_keyboard": false
-        },
-        {
-          "disable_built_in_keyboard_if_exists": false,
-          "fn_function_keys": [],
-          "game_pad_swap_sticks": false,
-          "identifiers": {
-            "is_game_pad": false,
-            "is_keyboard": true,
-            "is_pointing_device": false,
-            "product_id": 668,
-            "vendor_id": 1452
-          },
-          "ignore": false,
-          "manipulate_caps_lock_led": true,
-          "mouse_flip_horizontal_wheel": false,
-          "mouse_flip_vertical_wheel": false,
-          "mouse_flip_x": false,
-          "mouse_flip_y": false,
-          "mouse_swap_wheels": false,
-          "mouse_swap_xy": false,
-          "simple_modifications": [],
-          "treat_as_built_in_keyboard": false
-        }
-      ],
-      "fn_function_keys": [
-        {
-          "from": {
-            "key_code": "f1"
-          },
-          "to": [
-            {
-              "consumer_key_code": "display_brightness_decrement"
-            }
-          ]
-        },
-        {
-          "from": {
-            "key_code": "f2"
-          },
-          "to": [
-            {
-              "consumer_key_code": "display_brightness_increment"
-            }
-          ]
-        },
-        {
-          "from": {
-            "key_code": "f3"
-          },
-          "to": [
-            {
-              "apple_vendor_keyboard_key_code": "mission_control"
-            }
-          ]
-        },
-        {
-          "from": {
-            "key_code": "f4"
-          },
-          "to": [
-            {
-              "apple_vendor_keyboard_key_code": "spotlight"
-            }
-          ]
-        },
-        {
-          "from": {
-            "key_code": "f5"
-          },
-          "to": [
-            {
-              "consumer_key_code": "dictation"
-            }
-          ]
-        },
-        {
-          "from": {
-            "key_code": "f6"
-          },
-          "to": [
-            {
-              "key_code": "f6"
-            }
-          ]
-        },
-        {
-          "from": {
-            "key_code": "f7"
-          },
-          "to": [
-            {
-              "consumer_key_code": "rewind"
-            }
-          ]
-        },
-        {
-          "from": {
-            "key_code": "f8"
-          },
-          "to": [
-            {
-              "consumer_key_code": "play_or_pause"
-            }
-          ]
-        },
-        {
-          "from": {
-            "key_code": "f9"
-          },
-          "to": [
-            {
-              "consumer_key_code": "fast_forward"
-            }
-          ]
-        },
-        {
-          "from": {
-            "key_code": "f10"
-          },
-          "to": [
-            {
-              "consumer_key_code": "mute"
-            }
-          ]
-        },
-        {
-          "from": {
-            "key_code": "f11"
-          },
-          "to": [
-            {
-              "consumer_key_code": "volume_decrement"
-            }
-          ]
-        },
-        {
-          "from": {
-            "key_code": "f12"
-          },
-          "to": [
-            {
-              "consumer_key_code": "volume_increment"
-            }
-          ]
         }
       ],
       "name": "Default profile",
-      "parameters": {
-        "delay_milliseconds_before_open_device": 1000
-      },
       "selected": true,
-      "simple_modifications": [],
       "virtual_hid_keyboard": {
         "country_code": 0,
-        "indicate_sticky_modifier_keys_state": true,
-        "mouse_key_xy_scale": 100
+        "keyboard_type_v2": "ansi"
       }
     }
   ]
